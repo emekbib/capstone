@@ -1,0 +1,37 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+    <h1>Section I - Company and Mentor Information</h1>
+    <label for="contact-name" >Contact Name: </label>
+    <input id="contact-name" type="text" formControlName="contactName"> <br/>
+    <label for="job-title" >Contact Job Title: </label>
+    <input id="job-title" type="text" formControlName="contactJob"> <br/>
+    <label for="contact-email" >Contact Email: </label>
+    <input id="contact-email" type="email" formControlName="contactEmail"><br/>
+    <label for="contact-phone" >Contact Phone: </label>
+    <input id="contact-phone" type="tel" formControlName="contactPhone"><br/>
+    <label for="company-name" >Organization/Company Name: </label>
+    <input id="company-name" type="text" formControlName="comapnyName"><br/>
+    <label for="oraganization-address" >Organization Address: </label>
+    <input id="organization-address" type="text" formControlName="organAddress"><br/>
+    <label for="organization-website" >Organization Website: </label>
+    <input id="organization-website" type="text" formControlName="organWebsite">
+    <h2>Section II - Project for Which Student will Participate</h2>
+    <label for="project-title" >Project Title: </label>
+    <br><input id="project-title" type="text" formControlName="project-title"> <br/>
+    <label for="desc-project" >Description of Project: </label>
+    <br><input id="desc-project" type="text" formControlName="descproject"> <br/>
+    <label for="skills-project" >What techincal skills/requirements should your ideal students have for this project: </label>
+    <br><input id="skills-project" type="text" formControlName="skillsproject"><br/>
+    <label for="duties-project" >Duties of the Students(Please indicate the task/deliverables and the approximate amount of time the students will spend on each as a percentage of their overall time.): </label>
+    <br><input id="duties-project" type="text" formControlName="dutiesproject"><br/>
+    <label for="benefits-students" >What is the benefit of this project to the students? (Please indicate how the project benefits the student’s educational and professional growth): </label>
+    <br><input id="benefits-students" type="text" formControlName="benefitsstudents"><br/>
+    <label for="compnany-provision" >What will the company provide to students to carry out this project? (Such as training, data, equipment, traveling, etc.) </label>
+    <br><input id="compnany-provision" type="text" formControlName="compnanyprovision"><br/>
+
+    
+    
+    <p>Form Status: {{ profileForm.status }}</p>
+    <p>Complete the form to enable button.</p>
+<button type="submit" [disabled]="!profileForm.valid">Submit</button>
+  </form>
